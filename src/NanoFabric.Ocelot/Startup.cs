@@ -42,11 +42,11 @@ namespace NanoFabric.Ocelot
                 .WithDictionaryHandle();
             };
 
-            services.AddOcelotOutputCaching(settings);
-            services.AddOcelot(Configuration);
+           // services.AddOcelotOutputCaching(settings);
+            services.AddOcelot(Configuration, settings);
         }
 
-        public IConfigurationRoot Configuration { get; } 
+        public IConfigurationRoot Configuration { get; }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public async void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
